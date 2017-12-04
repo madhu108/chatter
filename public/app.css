@@ -1,0 +1,85 @@
+body {
+    /*background: url('https://wallpapers.walldevil.com/wallpapers/a77/preview/desktop-background-abstract-wallpaper-green-noise-wallpapers.jpg')no-repeat center center fixed;*/
+    background-color: #FFFFBD;
+}
+
+nav a {
+    color: bisque
+}
+
+footer {}
+
+footer h4 {
+    text-align: center;
+}
+
+.jumb {
+    background-color: white
+}
+
+.flex {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.collumn {
+    flex-direction: column;
+}
+
+.navCust {
+    /*background-color: #999AA1;*/
+}
+
+
+#landingChatter {
+    text-decoration: none;
+    color: inherit;
+}
+
+.goIn {
+    text-align: center;
+}
+
+.goInLine {
+    margin-top: 30px
+}
+
+.formWell {
+
+    margin: 25px auto;
+    position: absolute;
+    left: 0;
+    right: 0;
+}
+
+.chatroomDiv {
+
+    min-height: 60px;
+}
+
+.fixed-panel {
+
+    max-height: 300px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+
+
+.commDiv {
+    display: inline-block;
+    vertical-align: middle;
+    background-color: #CDF8EF;
+    height: auto;
+    padding: 0;
+    vertical-align: middle;
+    border-radius: 3px;
+    margin-top: 1px;
+}
+
+.comment {
+    margin: 3px 3px;
+    word-break: break-all;
+    white-space: normal;
+}

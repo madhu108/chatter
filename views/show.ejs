@@ -1,0 +1,42 @@
+<% include ./partials/header %>
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <h3 class="panel-title"><%=chatroom.name.toUpperCase()%></h3>
+            <hr>
+            <p><em>Created by <strong><%= chatroom.author.user%></strong></em></p>
+        </div>
+        <div id="scrollDown" class="panel-body fixed-panel">
+            <% chatroom.comments.forEach((comment)=>{ %>
+                <!-- <div class=" well well-sm "> -->
+                <div class="blockDiv">
+                    <div class="commDiv">
+                        <p class="comment">
+                            <strong> <%= comment.author.username %>:</strong>
+                            <%= comment.text%>
+                        </p>
+                    </div>
+                </div>
+                <!--  </div> -->
+                <% }) %>
+                    <div id="output">
+                    </div>
+                    <div id="feedback"></div>
+        </div>
+    </div>
+    <!-- <div class="panel-footer"> -->
+    <form class="form-horizontal" action="/chatrooms/<%=chatroom._id%>/comments" method="post">
+        <div class="form-group">
+            <div class="col-md-6">
+                <input id="message" class="form-control" rows="3" type="text" placeholder="comment" name="comment[text]"></input>
+            </div>
+        </div>
+        <div class="form-inline">
+            <div class="form-group">
+                <div class=" col-sm-2 col-sm-offset-0">
+                    <button id="send" type="submit" class="btn btn-primary">Add</button>
+                </div>
+            </div>
+        </div>
+    </form>
+    <!-- </div> -->
+    <% include ./partials/footer %>

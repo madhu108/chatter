@@ -1,0 +1,22 @@
+<% include ./partials/header %>
+    <div class="jumbotron flex">
+        <h1> Welcome to chatter </h1>
+    </div>
+    <div class="row">
+        <% chats.forEach((chat) => { %>
+            <div class="col-xs-6 col-md-3">
+                <a href="/chatrooms/<%=chat._id%>">
+                    <div class="thumbnail chatroomDiv flex collumn">
+                        <h4>
+                            <%=chat.name.toUpperCase() %>
+                        </h4>
+                        <p>
+                            <em>Created by <strong><%=chat.author.user%></strong></em>
+                        </p>
+                    </div>
+                </a>
+            </div>
+            <% }) %>
+    </div>
+    <a class="btn btn-primary" href="/chatrooms/newChatroom">Add new Chatroom</a>
+    <% include ./partials/footer %>
