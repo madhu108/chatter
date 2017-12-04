@@ -9,7 +9,7 @@ var express = require('express'),
     Chat = require('./models/chat'),
     Comment = require('./models/comment'),
     app = express(),
-    port = 3500;
+    port = process.env.PORT || 3500;
 
 mongoose.connect('mongodb://192.168.1.100/chat', { useMongoClient: true });
 mongoose.Promise = global.Promise;
